@@ -1,3 +1,10 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+FILE="$HOME/DotNetProjectWizard/src/DotNetProjectWizard/CommandDispatcher.cs"
+
+cat > "$FILE" <<'CSHARP'
 using System;
 using System.IO;
 
@@ -6,26 +13,25 @@ namespace DotNetProjectWizard;
 public class CommandDispatcher
 {
     private readonly IShellExecutor _shell;
-    private readonly string Root;
+    private readonly string Root = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "DotNetProjectWizard");
 
     public CommandDispatcher(IShellExecutor shell)
     {
         _shell = shell;
-        Root = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "DotNetProjectWizard");
     }
 
     public void Dispatch(string[] args)
     {
         if (args.Length == 0)
         {
-            Print();
+            Help();
             return;
         }
 
         switch (args[0])
         {
             case "new":
-                Run(args);
+                New(args);
                 break;
 
             case "list":
@@ -33,30 +39,35 @@ public class CommandDispatcher
                 break;
 
             default:
-                Print();
+                Help();
                 break;
         }
     }
 
-    void Print()
+    void Help()
     {
-        Console.WriteLine("DotNetProjectWizard");
-        Console.WriteLine(" new <template>");
-        Console.WriteLine(" list");
+        Console.WriteLine("projectwizard commands:");
+        Console.WriteLine("  new <template>");
+        Console.WriteLine("  list");
     }
 
     void List()
     {
         var dir = Path.Combine(Root, "scripts");
 
+        if (!Directory.Exists(dir))
+        {
+            Console.WriteLine("No templates");
+            return;
+        }
+
         foreach (var d in Directory.GetDirectories(dir))
-            Console.WriteLine("- " + Path.GetFileName(d));
+            Console.WriteLine(Path.GetFileName(d));
     }
 
-    void Run(string[] args)
+    void New(string[] args)
     {
-        if (args.Length < 2)
-            return;
+        if (args.Length < 2) return;
 
         var script = Path.Combine(Root, "scripts", args[1], "01-create-solution.sh");
 
@@ -69,3 +80,6 @@ public class CommandDispatcher
         _shell.Execute($"bash \"{script}\"");
     }
 }
+CSHARP
+
+echo "Help system added."

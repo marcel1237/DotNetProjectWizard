@@ -1,3 +1,10 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+FILE="$HOME/DotNetProjectWizard/src/DotNetProjectWizard/CommandDispatcher.cs"
+
+cat > "$FILE" <<'CSHARP'
 using System;
 using System.IO;
 
@@ -69,3 +76,6 @@ public class CommandDispatcher
         _shell.Execute($"bash \"{script}\"");
     }
 }
+CSHARP
+
+echo "CLI finalized."

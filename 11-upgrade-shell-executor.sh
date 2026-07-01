@@ -1,3 +1,11 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+PROJECT_NAME="DotNetProjectWizard"
+FILE="$HOME/$PROJECT_NAME/src/$PROJECT_NAME/Shell/ShellExecutor.cs"
+
+cat > "$FILE" <<'CSHARP'
 using System;
 using System.Diagnostics;
 
@@ -40,3 +48,6 @@ public class ShellExecutor : IShellExecutor
         return process.ExitCode;
     }
 }
+CSHARP
+
+echo "ShellExecutor upgraded."

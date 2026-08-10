@@ -1,0 +1,35 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="DotNetProjectWizard.App.Views.Console.ConsoleView">
+
+    <DockPanel Margin="10">
+
+        <TextBlock Text="DEV CONSOLE"
+                   FontSize="18"
+                   DockPanel.Dock="Top"
+                   Margin="0,0,0,10"/>
+
+        <ListBox ItemsSource="{Binding Logs}">
+
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+
+                        <TextBlock Text="{Binding Time}"
+                                   Opacity="0.6"
+                                   Margin="0,0,10,0"/>
+
+                        <TextBlock Text="{Binding Level}"
+                                   Margin="0,0,10,0"/>
+
+                        <TextBlock Text="{Binding Message}"/>
+
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+        </ListBox>
+
+    </DockPanel>
+
+</UserControl>

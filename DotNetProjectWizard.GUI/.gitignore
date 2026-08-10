@@ -1,0 +1,15 @@
+bin/
+obj/
+
+artifacts/
+
+tmp/
+
+backup/
+
+logs/
+
+.vscode/
+
+.idea/
+

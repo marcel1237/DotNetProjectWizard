@@ -1,0 +1,11 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui">
+
+    <ResourceDictionary.MergedDictionaries>
+
+        <ResourceInclude Source="avares://DotNetProjectWizard.App/Themes/Tokens/Colors.axaml"/>
+        <ResourceInclude Source="avares://DotNetProjectWizard.App/Themes/Styles/BaseStyles.axaml"/>
+        <ResourceInclude Source="avares://DotNetProjectWizard.App/Themes/Styles/InteractionStyles.axaml"/>
+
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

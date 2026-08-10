@@ -1,0 +1,21 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui">
+
+    <!-- Backgrounds -->
+    <Color x:Key="Color.Background.Primary">#1E1E2E</Color>
+    <Color x:Key="Color.Background.Secondary">#252537</Color>
+    <Color x:Key="Color.Background.Tertiary">#2D2D44</Color>
+
+    <!-- Text -->
+    <Color x:Key="Color.Text.Primary">#FFFFFF</Color>
+    <Color x:Key="Color.Text.Secondary">#B5B5C3</Color>
+
+    <!-- Accent -->
+    <Color x:Key="Color.Accent.Primary">#7C3AED</Color>
+    <Color x:Key="Color.Accent.Hover">#9B5CFF</Color>
+
+    <!-- Status -->
+    <Color x:Key="Color.Success">#22C55E</Color>
+    <Color x:Key="Color.Warning">#F59E0B</Color>
+    <Color x:Key="Color.Error">#EF4444</Color>
+
+</ResourceDictionary>

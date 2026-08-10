@@ -1,0 +1,38 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="DotNetProjectWizard.App.MainWindow"
+        Width="1200"
+        Height="750"
+        Title="DotNetProjectWizard">
+
+    <Grid ColumnDefinitions="220,*">
+
+        <!-- SIDEBAR -->
+        <Border Background="#1E1E2E">
+
+            <StackPanel Margin="10">
+
+                <TextBlock Text="DotNetWizard"
+                           Foreground="White"
+                           FontSize="18"
+                           Margin="0,10"/>
+
+                <Button Content="🏠 Home"
+                        Command="{Binding ShowHomeCommand}"
+                        Margin="0,5"/>
+
+                <Button Content="📦 New Project"
+                        Command="{Binding ShowNewProjectCommand}"
+                        Margin="0,5"/>
+
+            </StackPanel>
+
+        </Border>
+
+        <!-- CONTENT -->
+        <ContentControl Grid.Column="1"
+                        Content="{Binding CurrentView}"/>
+
+    </Grid>
+
+</Window>

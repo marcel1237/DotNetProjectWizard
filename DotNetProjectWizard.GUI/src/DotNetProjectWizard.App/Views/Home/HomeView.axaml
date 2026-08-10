@@ -1,0 +1,71 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="DotNetProjectWizard.App.Views.Home.HomeView">
+
+    <Grid RowDefinitions="Auto,*" Margin="24">
+
+        <!-- HEADER -->
+        <StackPanel>
+
+            <TextBlock Text="DotNetProjectWizard"
+                       FontSize="32"
+                       FontWeight="Bold"/>
+
+            <TextBlock Text="Modern .NET GUI Engine"
+                       Foreground="{DynamicResource Color.Text.Secondary}"
+                       Margin="0,6,0,18"/>
+
+        </StackPanel>
+
+        <!-- DASHBOARD -->
+        <UniformGrid Grid.Row="1" Columns="2">
+
+            <Border Classes="card">
+                <StackPanel>
+                    <TextBlock Text="📦 New Project"
+                               FontSize="18"
+                               FontWeight="SemiBold"/>
+                    <TextBlock Text="Create modern .NET apps"
+                               Foreground="{DynamicResource Color.Text.Secondary}"
+                               Margin="0,6,0,0"/>
+                </StackPanel>
+            </Border>
+
+            <Border Classes="card">
+                <StackPanel>
+                    <TextBlock Text="⚙ Templates"
+                               FontSize="18"
+                               FontWeight="SemiBold"/>
+                    <TextBlock Text="Project templates manager"
+                               Foreground="{DynamicResource Color.Text.Secondary}"
+                               Margin="0,6,0,0"/>
+                </StackPanel>
+            </Border>
+
+            <Border Classes="card">
+                <StackPanel>
+                    <TextBlock Text="🧩 Extensions"
+                               FontSize="18"
+                               FontWeight="SemiBold"/>
+                    <TextBlock Text="Plugin ecosystem"
+                               Foreground="{DynamicResource Color.Text.Secondary}"
+                               Margin="0,6,0,0"/>
+                </StackPanel>
+            </Border>
+
+            <Border Classes="card">
+                <StackPanel>
+                    <TextBlock Text="📊 Logs"
+                               FontSize="18"
+                               FontWeight="SemiBold"/>
+                    <TextBlock Text="System diagnostics"
+                               Foreground="{DynamicResource Color.Text.Secondary}"
+                               Margin="0,6,0,0"/>
+                </StackPanel>
+            </Border>
+
+        </UniformGrid>
+
+    </Grid>
+
+</UserControl>

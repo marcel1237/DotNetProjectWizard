@@ -1,0 +1,26 @@
+<ResourceDictionary
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- COLORS -->
+    <Color x:Key="Background">#1E1E2E</Color>
+    <Color x:Key="CardBackground">#252537</Color>
+    <Color x:Key="Accent">#7C3AED</Color>
+
+    <!-- STYLES -->
+    <Style Selector="TextBlock">
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+
+    <Style Selector="Button">
+        <Setter Property="Background" Value="#2D2D44"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Padding" Value="8"/>
+        <Setter Property="CornerRadius" Value="6"/>
+    </Style>
+
+    <Style Selector="Button:pointerover">
+        <Setter Property="Background" Value="#3A3A55"/>
+    </Style>
+
+</ResourceDictionary>

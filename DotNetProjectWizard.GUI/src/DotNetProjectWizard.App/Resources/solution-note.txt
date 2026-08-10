@@ -1,0 +1,6 @@
+Projeto usa formato .slnx (DOTNET MODERN SOLUTION FORMAT)
+
+NÃO criar .sln
+
+Sempre usar:
+dotnet new sln --name DotNetProjectWizard.GUI (se necessário)
